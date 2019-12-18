@@ -17,6 +17,9 @@ import numpy as np
 import torch
 import torchvision.transforms as transforms
 
+import warnings
+warnings.filterwarnings("ignore")
+
 dir_path = (os.path.abspath(os.path.join(os.path.realpath(__file__), './.')))
 sys.path.append(dir_path)
 
