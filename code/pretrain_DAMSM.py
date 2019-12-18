@@ -243,11 +243,7 @@ if __name__ == "__main__":
                           transform=image_transform)
 
     print(dataset.n_words, dataset.embeddings_num)
-    assert dataset
-    dataloader = torch.utils.data.DataLoader(
-        dataset, batch_size=batch_size, drop_last=True,
-        shuffle=True, num_workers=int(cfg.WORKERS))
-
+    # assert dataset
     # # validation data #
     dataset_val = TextDataset(cfg.DATA_DIR, 'test',
                               base_size=cfg.TREE.BASE_SIZE,
